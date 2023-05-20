@@ -27,9 +27,11 @@ class Mobilmodel extends CI_Model {
 	function GetMobil() {
         //$this->db->get('mobil');
         //return $this->db->order_by('type','ASC')->result();
-        $this->db->from("mobil");
-		$this->db->order_by("type", "ASC");
-		$query = $this->db->get(); 
+		$this->db->select('mobil.*, merk.namamerk AS namamerk');
+		$this->db->from('mobil');
+		$this->db->join('merk', 'merk.idmerk = mobil.idmerk');
+		$this->db->order_by('mobil.type', 'ASC');
+		$query = $this->db->get();
 		return $query->result();
     }
 

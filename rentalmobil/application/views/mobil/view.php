@@ -47,7 +47,7 @@
                   ?>         
                     <tr>
                       <td><?php echo $no; ?></td>
-                      <td><?php echo $row->type; ?></td>
+                      <td><?php echo $row->namamerk; ?></td>
                       <td><?php echo $row->type; ?></td>
                       <td><?php echo $row->platnomer; ?></td>
                       <td><?php echo number_format($row->tarif); ?></td>
