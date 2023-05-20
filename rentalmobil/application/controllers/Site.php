@@ -31,6 +31,7 @@ class Site extends CI_Controller {
 		if($this->session->userdata('status') == "login"){
 			$data['mobil'] = $this->sitemodel->GetMobil();
 			$data['content'] = "content";
+			$data['status_user'] = $this->sitemodel->getuser();
 			$this->load->view('template/template', $data);
 		} else {
 			$this->load->view('login');

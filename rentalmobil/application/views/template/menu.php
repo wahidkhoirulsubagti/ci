@@ -56,16 +56,26 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-clone"></i>
-            <span>Transaki</span>
+            <span>Transaksi</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?=base_url()?>transaksi"><i class="fa fa-folder-open"></i> Data Transaki</a></li>
-            <li><a href="<?=base_url()?>transaksi/add"><i class="fa fa-plus"></i> Tambah Transaki</a></li>
+            <li><a href="<?=base_url()?>transaksi"><i class="fa fa-folder-open"></i> Data Transaksi</a></li>
+            <li><a href="<?=base_url()?>transaksi/add"><i class="fa fa-plus"></i> Tambah Transaksi</a></li>
           </ul>
         </li>
+<?php 
+foreach($status_user as $status) { 
+  if($status->username == 'administrator') { ?>
+
+<!-- isi ketika kondisi memenuhi -->
+
+<?php } else { ?>
+  <!-- isi jika kondisi tidak dipenuhi -->
+  <?php }}?>
+
        <?php /* <li class="treeview">
           <a href="#">
             <i class="fa fa-line-chart"></i>

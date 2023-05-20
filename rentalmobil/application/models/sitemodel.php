@@ -39,7 +39,12 @@ class Sitemodel extends CI_Model {
 		return $query->result();
  	}
 
- 	
+	 public function getuser(){
+		$this->db->from("user");
+		$this->db->order_by("iduser", "ASC");
+		$query = $this->db->get(); 
+		return $query->result();
+	}
 
 	
 
